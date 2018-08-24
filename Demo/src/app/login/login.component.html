@@ -1,3 +1,20 @@
-<p>
-  login works!
-</p>
+<form action="/action_page.php">
+  <div class="container">
+    <div>
+        <!-- <label for="uname"><b>Username</b></label> -->
+        Username: <input type="text" placeholder="Enter Username" name="uname" required>
+    </div>
+
+    <div>
+        <!-- <label for="psw"><b>Password</b></label> -->
+        Password: <input type="password" placeholder="Enter Password" name="psw" required>
+    </div>
+        
+    <button type="submit" (click)="login()">Login</button>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <span class="psw">Forgot <a href="#">password?</a></span>&nbsp;&nbsp;
+    <span class="psw"><a href="signup">Sign UP</a></span>
+  </div>
+</form>
