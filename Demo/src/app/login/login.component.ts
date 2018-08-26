@@ -19,8 +19,18 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.userService.setSession(this.user);
-    this.router.navigate(['/users']);
+    if(this.userService.checkCredential(this.user)){
+      this.userService.setSession(this.user);
+      this.router.navigate(['/users']);
+    }
+    else{
+      alert("The username or password you entered is incorrect");
+    }
+    
+  }
+
+  signUp(){
+    this.router.navigate(['/signup']);
   }
 
 }

@@ -1,0 +1,29 @@
+.user-row{
+    padding: 1%;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.home-container{
+    margin: 30px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: underline !important;
+    color: #007bff !important;
+    margin: 1.5% 6%;
+    font-size: 16px;
+}
+
+.header {
+    margin: 15px 0;
+    float: left;
+}
+
+.user-box {
+    margin-top: 2%;
+    border: 1px solid #888;
+    border-radius: .3rem;
+}

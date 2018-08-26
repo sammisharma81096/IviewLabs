@@ -9,15 +9,24 @@ import { Router } from '@angular/router';
 })
 export class UsersComponent implements OnInit {
 
-  users: any[] = [{
-    'id': 1
-  }];
+  public userist: any[];
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     if(!this.userService.getSession()){
       this.router.navigate(['/login']);
     }
+    this.userist = this.userService.getUserJSON();
+    // this.userService.getUserJSON().subscribe(
+    //   response => {
+    //     this.userist = response['users'];
+    //   }
+    // );
+  }
+
+  logOut(){
+    this.userService.deleteSession();
+    this.router.navigate(['/login']);
   }
 
 }

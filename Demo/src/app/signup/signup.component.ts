@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../users/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +9,16 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  user: any = {
+    "id": "",
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "password": "",
+    "phone":"",
+    "gender": "male"
+  };
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
   }
@@ -18,6 +28,8 @@ export class SignupComponent implements OnInit {
   }
 
   signUp(){
+    this.user.id = Math.floor(100000000 + Math.random() * 900000000);
+    this.userService.addUser(this.user);
     this.router.navigate(['/login']);
   }
 

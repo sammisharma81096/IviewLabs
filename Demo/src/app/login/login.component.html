@@ -1,20 +1,28 @@
-<form action="/action_page.php">
-  <div class="container">
-    <div>
-        <!-- <label for="uname"><b>Username</b></label> -->
-        Username: <input type="text" placeholder="Enter Username" name="uname" required>
+<div class="container">
+  <form class="loginForm" #logInForm="ngForm">
+    <div class="container">
+        <div class="container col-sm-12 col-md-12 col-lg-12 text-center">
+            <button class="loginBtn loginBtn--facebook">Login with Facebook</button>      
+            <button class="loginBtn loginBtn--google">Login with Google</button>        
+        </div>
+        <div class="text-center">
+            <h5>IViewLabs</h5>
+        </div>
+        <hr>
+        <div>
+            <label for="uname"><b>Username&nbsp;</b></label>    
+            <input type="email" placeholder="Enter Username" name="uname" [(ngModel)]="user.userName" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+            <label for="psw"><b>Password&nbsp;</b></label>  
+            <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="user.password" required> 
+        </div>
+        <div class="clearfix row">
+            <div class="col-sm-7 col-md-7 col-lg-7 signUpDiv">
+                <a href="/signup">Sign UP</a>
+            </div>
+            <div class="col-sm-5 col-md-5 col-lg-5">
+                <button type="submit" (click)="login()" class="signupbtn pull-right" [disabled]="!logInForm.valid">Login</button> 
+            </div>                      
+          </div>      
     </div>
-
-    <div>
-        <!-- <label for="psw"><b>Password</b></label> -->
-        Password: <input type="password" placeholder="Enter Password" name="psw" required>
-    </div>
-        
-    <button type="submit" (click)="login()">Login</button>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <span class="psw">Forgot <a href="#">password?</a></span>&nbsp;&nbsp;
-    <span class="psw"><a href="signup">Sign UP</a></span>
-  </div>
-</form>
+  </form>
+</div>

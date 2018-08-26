@@ -1,0 +1,11 @@
+{
+    "users": [
+        {
+          "firstName": "Sammi",
+          "lastName": "Sharma",
+          "email": "sami@gmail.com",
+          "phone": "9999999999",
+          "gender": "female"
+        }
+      ]
+}

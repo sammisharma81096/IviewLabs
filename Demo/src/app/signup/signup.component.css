@@ -1,16 +1,17 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-/* Full-width input fields */
 input[type=text], input[type=password], input[type=email] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
+    width: 75%;
+    padding: 10px;
+    margin: 3px 0 10px 0;
     border: none;
     background: #f1f1f1;
 }
 
+label{
+    width: 20%;
+}
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
     background-color: #ddd;
@@ -33,67 +34,20 @@ button:hover {
     opacity:1;
 }
 
-/* Extra styles for the cancel button */
 .cancelbtn {
-    padding: 14px 20px;
     background-color: #f44336;
 }
 
-/* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-    padding: 16px;
-}
-
-.modal {
-    position: fixed; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; 
-    padding-top: 10px;
-    overflow: auto;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-}
- 
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 40px;
+    float: left;
+    width: 48%;
+    margin-left: 1%;
+    padding: 10px 14px;
     font-weight: bold;
-    color: #f1f1f1;
 }
 
-.close:hover,
-.close:focus {
-    color: #f44336;
-    cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+.signupbtn:disabled{
+    background-color: #93cf96;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
@@ -101,4 +55,60 @@ hr {
     .cancelbtn, .signupbtn {
        width: 100%;
     }
+}
+
+.socialBtn.goog span {
+    padding-left: 15px;
+}
+
+.socialLoginSec .btnCont .socialBtn em {
+    background: url(/assets/images/socialIcon.png) no-repeat;
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    width: 26px;
+    height: 26px;
+}
+
+.socialLoginSec .btnCont .socialBtn em.gIc {
+    background-position: 0 -26px;
+}
+
+.socialLoginSec .btnCont .socialBtn {
+    background: #fff;
+    color: #333;
+    display: inline-block;
+    padding: 12px 0;
+    width: 130px;
+    position: relative;
+    border: 1px solid #bebebe;
+}
+
+.socialLoginSec .btnCont .socialBtn.fb span {
+    padding-left: 20px;
+}
+
+.socialLoginSec .btnCont .socialBtn.fb {
+    margin-right: 10px;
+}
+
+.socialLoginSec .btnCont {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.socialLoginSec {
+    text-align: center;
+    margin: 10px 0 15px;
+}
+
+.signupForm{
+    margin: 3% 20% 0 20%;
+    border: 1px solid #888;
+    border-radius: .3rem;
+}
+
+.no-padding {
+    padding: 0 !important;
 }

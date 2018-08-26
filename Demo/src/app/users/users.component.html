@@ -1,5 +1,33 @@
-<div class="row" *ngFor="let user of users">
- <div class="col-sm-3 col-md-3 col-lg-3">
-   {{user.id}}
- </div>
-</div>
+<section class="home-container">
+  <div class="text-center">
+      <h4>
+        <span>IViewLabs</span>
+        <a class="pull-right" (click)="logOut()">Log Out</a>
+      </h4>         
+      <hr>
+  </div>
+  <div class="container no-padding user-box" *ngIf="userist.length > 0">
+      <div class="text-center">
+          <h5 class="header">User List</h5>                   
+      </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 row">        
+        <div class="col-sm-1 col-md-1 col-lg-1 user-row">SR No.</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 user-row">First Name</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 user-row">Last Name</div>
+        <div class="col-sm-3 col-md-3 col-lg-3 user-row">Email</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 user-row">Phone Number</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 user-row">Gender</div>
+    </div>
+    <div class="row col-sm-12 col-md-12 col-lg-12 table" *ngFor="let user of userist;let i=index;">        
+        <div class="col-sm-1 col-md-1 col-lg-1 user-row">{{i+1}}</div>        
+        <div class="col-sm-2 col-md-2 col-lg-2 user-row">{{user.firstName}}</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 user-row">{{user.lastName}}</div>
+        <div class="col-sm-3 col-md-3 col-lg-3 user-row">{{user.email}}</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 user-row">{{user.phone}}</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 user-row">{{user.gender}}</div>
+      </div>
+  </div>
+  <div class="container no-padding user-box" *ngIf="userist.length<1">
+      No User Found
+  </div>
+</section>
